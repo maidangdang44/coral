@@ -8,6 +8,8 @@ package com.linkedin.coral.trino.rel2trino.transformers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.base.Preconditions;
+
 import org.apache.calcite.sql.SqlCall;
 import org.apache.calcite.sql.SqlIdentifier;
 import org.apache.calcite.sql.SqlNode;
@@ -17,7 +19,6 @@ import org.apache.calcite.sql.parser.SqlParserPos;
 import org.apache.calcite.sql.type.OperandTypes;
 import org.apache.calcite.sql.validate.SqlUserDefinedFunction;
 
-import com.linkedin.coral.com.google.common.base.Preconditions;
 import com.linkedin.coral.common.functions.FunctionReturnTypes;
 import com.linkedin.coral.common.transformers.SqlCallTransformer;
 import com.linkedin.coral.hive.hive2rel.functions.StaticHiveFunctionRegistry;

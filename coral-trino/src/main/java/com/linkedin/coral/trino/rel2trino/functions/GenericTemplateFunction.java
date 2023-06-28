@@ -5,6 +5,8 @@
  */
 package com.linkedin.coral.trino.rel2trino.functions;
 
+import com.google.common.base.Preconditions;
+
 import org.apache.calcite.rel.type.RelDataType;
 import org.apache.calcite.sql.SqlCall;
 import org.apache.calcite.sql.SqlCallBinding;
@@ -16,8 +18,6 @@ import org.apache.calcite.sql.type.SqlOperandTypeChecker;
 import org.apache.calcite.sql.validate.SqlUserDefinedFunction;
 import org.apache.calcite.sql.validate.SqlValidator;
 import org.apache.calcite.sql.validate.SqlValidatorScope;
-
-import com.linkedin.coral.com.google.common.base.Preconditions;
 
 
 /**

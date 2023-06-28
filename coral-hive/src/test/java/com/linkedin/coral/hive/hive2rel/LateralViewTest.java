@@ -20,7 +20,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.linkedin.coral.com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableList;
 import com.linkedin.coral.common.HiveMscAdapter;
 import com.linkedin.coral.common.ToRelConverterTestUtils;
 import com.linkedin.coral.hive.hive2rel.functions.StaticHiveFunctionRegistry;

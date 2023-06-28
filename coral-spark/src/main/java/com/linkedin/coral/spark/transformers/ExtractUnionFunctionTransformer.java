@@ -9,13 +9,14 @@ import java.net.URI;
 import java.util.List;
 import java.util.Set;
 
+import com.google.common.collect.ImmutableList;
+
 import org.apache.calcite.sql.SqlCall;
 import org.apache.calcite.sql.SqlNode;
 import org.apache.calcite.sql.SqlNumericLiteral;
 import org.apache.calcite.sql.SqlOperator;
 import org.apache.calcite.sql.parser.SqlParserPos;
 
-import com.linkedin.coral.com.google.common.collect.ImmutableList;
 import com.linkedin.coral.common.transformers.SqlCallTransformer;
 import com.linkedin.coral.hive.hive2rel.functions.CoalesceStructUtility;
 import com.linkedin.coral.spark.containers.SparkUDFInfo;

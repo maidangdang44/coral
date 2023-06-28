@@ -9,6 +9,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Lists;
 import com.linkedin.avroutil1.compatibility.AvroCompatibilityHelper;
 import com.linkedin.avroutil1.compatibility.Jackson1Utils;
 
@@ -20,10 +23,6 @@ import org.apache.hadoop.hive.serde2.typeinfo.TypeInfoFactory;
 import org.apache.hadoop.hive.serde2.typeinfo.TypeInfoUtils;
 import org.codehaus.jackson.node.IntNode;
 import org.testng.annotations.Test;
-
-import com.linkedin.coral.com.google.common.base.Preconditions;
-import com.linkedin.coral.com.google.common.collect.ImmutableMap;
-import com.linkedin.coral.com.google.common.collect.Lists;
 
 import static org.testng.Assert.*;
 
