@@ -9,7 +9,7 @@ def versions = [
   'jetbrains': '16.0.2',
   'jline': '0.9.94',
   'kryo': '2.22',
-  'linkedin-calcite-core': '1.21.0.259',
+  'apache-calcite-core': '1.34.0',
   'pig': '0.15.0',
   'spark': '2.4.0',
   'spark3': '3.1.1',
@@ -35,7 +35,7 @@ ext.deps = [
   'jetbrains': "org.jetbrains:annotations:${versions['jetbrains']}",
   'jline': "jline:jline:${versions['jline']}",
   'kryo': "com.esotericsoftware.kryo:kryo:${versions['kryo']}",
-  'linkedin-calcite-core': "com.linkedin.calcite:calcite-core:${versions['linkedin-calcite-core']}",
+  'org.apache.calcite': "org.apache.calcite:calcite-core:${versions['apache-calcite-core']}",
   'pig': [
     'pig': "org.apache.pig:pig:${versions['pig']}:h2",
     'pigunit': "org.apache.pig:pigunit:${versions['pig']}"

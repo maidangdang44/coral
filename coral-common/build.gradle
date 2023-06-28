@@ -1,10 +1,10 @@
 dependencies {
-  compile(deps.'linkedin-calcite-core') {
+  compile(deps.'org.apache.calcite') {
     artifact {
       name = 'calcite-core'
       extension = 'jar'
       type = 'jar'
-      classifier = 'shaded'
+      classifier = ''
     }
   }
 
