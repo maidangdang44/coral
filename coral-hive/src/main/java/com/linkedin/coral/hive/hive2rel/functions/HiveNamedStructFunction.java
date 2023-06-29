@@ -10,13 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.calcite.rel.type.RelDataType;
-import org.apache.calcite.sql.SqlCall;
-import org.apache.calcite.sql.SqlCallBinding;
-import org.apache.calcite.sql.SqlIdentifier;
-import org.apache.calcite.sql.SqlNode;
-import org.apache.calcite.sql.SqlOperandCountRange;
-import org.apache.calcite.sql.SqlOperatorBinding;
-import org.apache.calcite.sql.SqlUtil;
+import org.apache.calcite.sql.*;
 import org.apache.calcite.sql.parser.SqlParserPos;
 import org.apache.calcite.sql.type.SqlOperandCountRanges;
 import org.apache.calcite.sql.type.SqlOperandTypeChecker;
@@ -33,7 +27,7 @@ public class HiveNamedStructFunction extends SqlUserDefinedFunction {
   public static final HiveNamedStructFunction NAMED_STRUCT = new HiveNamedStructFunction();
 
   public HiveNamedStructFunction() {
-    super(new SqlIdentifier("named_struct", SqlParserPos.ZERO), null, null, null, null, null);
+    super(new SqlIdentifier("named_struct", SqlParserPos.ZERO), SqlKind.OTHER_FUNCTION, null, null, null, null);
   }
 
   @Override

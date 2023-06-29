@@ -11,11 +11,9 @@ import com.google.common.collect.ImmutableList;
 
 import org.apache.calcite.rel.type.RelDataType;
 import org.apache.calcite.schema.Function;
-import org.apache.calcite.sql.SqlBasicCall;
-import org.apache.calcite.sql.SqlCall;
-import org.apache.calcite.sql.SqlFunctionCategory;
-import org.apache.calcite.sql.SqlIdentifier;
+import org.apache.calcite.sql.*;
 import org.apache.calcite.sql.parser.SqlParserPos;
+import org.apache.calcite.sql.type.SqlOperandMetadata;
 import org.apache.calcite.sql.type.SqlOperandTypeChecker;
 import org.apache.calcite.sql.type.SqlOperandTypeInference;
 import org.apache.calcite.sql.type.SqlReturnTypeInference;
@@ -40,8 +38,9 @@ public class VersionedSqlUserDefinedFunction extends SqlUserDefinedFunction {
   private VersionedSqlUserDefinedFunction(SqlIdentifier opName, SqlReturnTypeInference returnTypeInference,
       SqlOperandTypeInference operandTypeInference, SqlOperandTypeChecker operandTypeChecker,
       List<RelDataType> paramTypes, Function function, List<String> ivyDependencies, String viewDependentFunctionName) {
-    super(opName, returnTypeInference, operandTypeInference, operandTypeChecker, paramTypes, function,
-        SqlFunctionCategory.USER_DEFINED_FUNCTION);
+    super(opName, SqlKind.OTHER_FUNCTION, returnTypeInference, operandTypeInference,
+            operandTypeChecker instanceof SqlOperandMetadata ? (SqlOperandMetadata) operandTypeChecker : null,
+            function, SqlFunctionCategory.USER_DEFINED_FUNCTION);
     this.ivyDependencies = ivyDependencies;
     this.viewDependentFunctionName = viewDependentFunctionName;
   }

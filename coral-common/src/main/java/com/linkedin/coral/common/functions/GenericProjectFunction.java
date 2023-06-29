@@ -1,5 +1,5 @@
 /**
- * Copyright 2019-2022 LinkedIn Corporation. All rights reserved.
+ * Copyright 2019-2023 LinkedIn Corporation. All rights reserved.
  * Licensed under the BSD-2 Clause license.
  * See LICENSE in the project root for license information.
  */
@@ -38,7 +38,7 @@ public class GenericProjectFunction extends SqlUserDefinedFunction {
   private final RelDataType tableDataType;
 
   public GenericProjectFunction(RelDataType tableDataType) {
-    super(new SqlIdentifier("generic_project", SqlParserPos.ZERO), null, null, null, null, null);
+    super(new SqlIdentifier("generic_project", SqlParserPos.ZERO), SqlKind.OTHER_FUNCTION, null, null, null, null);
     this.tableDataType = tableDataType;
   }
 
